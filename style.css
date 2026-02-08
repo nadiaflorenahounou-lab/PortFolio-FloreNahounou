@@ -28,7 +28,6 @@ h1 { font-size: 2.5rem; margin: 10px 0; }
 
 .tags-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
 
-/* RETOUR AU BLEU POUR LES TAGS SOUS LE PROFIL */
 .tag-blue {
     font-size: 0.85rem; color: var(--text-main);
     border: 1.5px solid var(--accent-blue);
