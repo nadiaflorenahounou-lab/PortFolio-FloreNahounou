@@ -1,42 +1,262 @@
 :root {
-    --bg-color: #0f172a; --card-bg: #1e293b; --text-color: #f8fafc;
-    --accent-color: #38bdf8; --action-color: #10b981; --warning-color: #f59e0b;
+    --bg-color: #0f172a; /* Bleu nuit profond */
+    --card-bg: #1e293b; /* Bleu foncé pour les cartes */
+    --text-color: #f8fafc; /* Blanc cassé pour le texte */
+    --accent-color: #38bdf8; /* Bleu vif pour les accents */
+    --action-color: #10b981; /* Vert émeraude pour les actions */
+    --warning-color: #f59e0b; /* Orange pour les alertes/mentions légales */
 }
-body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
-header { padding: 40px 20px; text-align: center; }
-.profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--accent-color); object-fit: cover; }
-.bio-container { max-width: 800px; margin: 15px auto; font-size: 0.95rem; }
-.bio-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
 
-.section-title { text-align: center; margin-top: 60px; color: var(--accent-color); text-transform: uppercase; font-size: 1.2rem; letter-spacing: 1px; }
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif; /* Police moderne et lisible */
+    margin: 0;
+    line-height: 1.6;
+}
 
-/* Grilles */
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
-.project-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
-.project-img { width: 100%; height: 160px; object-fit: cover; opacity: 0.8; }
-.project-content { padding: 20px; }
+header {
+    padding: 40px 20px;
+    text-align: center;
+}
 
-/* Expérience */
-.experience-container { max-width: 850px; margin: auto; padding: 20px; }
-.exp-item { border-left: 2px solid var(--accent-color); padding-left: 20px; margin-bottom: 25px; }
-.exp-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--accent-color); font-size: 0.95rem; }
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid var(--accent-color);
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 15px 0 5px 0;
+    color: var(--accent-color);
+}
+
+.specialist-title {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 25px;
+}
+
+.bio-container {
+    max-width: 800px;
+    margin: 15px auto;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+.bio-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tags-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background: rgba(56, 189, 248, 0.15);
+    color: var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.tag.expert { background: rgba(16, 185, 129, 0.15); color: var(--action-color); }
+.tag.tech { background: rgba(56, 189, 248, 0.15); color: var(--accent-color); }
+
+.section-title {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+    display: inline-block;
+    padding-bottom: 8px;
+    width: auto;
+}
+
+/* Grilles des projets et engagements */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.project-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-img {
+    opacity: 1;
+}
+
+.project-content {
+    padding: 20px;
+}
+
+.project-content h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.project-content p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 15px;
+}
+
+/* Badges de statut */
+.status-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.65rem;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+.badge-private { background: #ef4444; } /* Rouge pour privé */
+.badge-confidential { background: #f59e0b; } /* Orange pour confidentiel */
+
+.tag-footer {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    margin-top: 10px;
+}
+
+/* Parcours Professionnel */
+.experience-container {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.exp-item {
+    border-left: 2px solid var(--accent-color);
+    padding-left: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.exp-header h4 {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: 1.05rem;
+}
+
+.exp-header span {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    font-weight: bold;
+}
+
+.exp-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.4;
+}
 
 /* Certifications */
-.certification-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1100px; margin: auto; padding: 20px; }
-.cert-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(56, 189, 248, 0.1); }
-.cert-icon { font-size: 1.5rem; }
-.cert-text h4 { margin: 0; font-size: 0.9rem; color: var(--accent-color); }
-.cert-text p { margin: 0; font-size: 0.8rem; opacity: 0.7; }
+.certification-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-/* Boutons */
-.btn { display: inline-block; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; margin-top: 10px; transition: 0.3s; }
-.btn-blue { background: var(--accent-color); color: var(--bg-color); }
-.btn-outline { border: 1px solid var(--accent-color); color: var(--accent-color); }
-.status-badge { position: absolute; top: 10px; right: 10px; padding: 4px 8px; border-radius: 5px; font-size: 0.6rem; font-weight: bold; color: white; }
-.badge-private { background: #ef4444; }
+.cert-item {
+    background: rgba(255,255,255,0.03);
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid rgba(56, 189, 248, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease;
+}
 
-/* FOOTER & MENTIONS LÉGALES */
-footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
-.social-icon { color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 0.9rem; }
-.legal-link { color: var(--warning-color); text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 5px; }
-.legal-link:hover { text-decoration: underline; opacity: 0.8; }
+.cert-item:hover {
+    transform: translateY(-3px);
+    background: rgba(56, 189, 248, 0.05);
+}
+
+.cert-icon {
+    font-size: 1.5rem;
+    color: var(--action-color); /* Icônes en vert */
+}
+
+.cert-text h4 {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--accent-color);
+}
+
+.cert-text p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* Boutons généraux */
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: 10px;
+    transition: 0.3s;
+    text-
