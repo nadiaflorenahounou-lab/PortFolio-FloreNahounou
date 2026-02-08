@@ -1,262 +1,179 @@
 :root {
-    --bg-color: #0f172a; /* Bleu nuit profond */
-    --card-bg: #1e293b; /* Bleu foncé pour les cartes */
-    --text-color: #f8fafc; /* Blanc cassé pour le texte */
-    --accent-color: #38bdf8; /* Bleu vif pour les accents */
-    --action-color: #10b981; /* Vert émeraude pour les actions */
-    --warning-color: #f59e0b; /* Orange pour les alertes/mentions légales */
+    --bg-color: #0d1425;
+    --card-bg: #1a233a;
+    --text-main: #f8fafc;
+    --accent-blue: #38bdf8;
+    --orange-legal: #f97316;
 }
 
 body {
     background-color: var(--bg-color);
-    color: var(--text-color);
-    font-family: 'Inter', sans-serif; /* Police moderne et lisible */
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    text-align: center;
     line-height: 1.6;
 }
 
-header {
-    padding: 40px 20px;
-    text-align: center;
-}
+header { padding: 60px 20px; }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
-    border: 3px solid var(--accent-color);
+    border: 3px solid var(--accent-blue);
     object-fit: cover;
+    margin-bottom: 20px;
 }
 
-h1 {
-    font-size: 2.2rem;
-    margin: 15px 0 5px 0;
-    color: var(--accent-color);
-}
-
-.specialist-title {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 25px;
-}
+h1 { font-size: 2.5rem; margin: 10px 0; letter-spacing: 1px; }
+.specialist-title { opacity: 0.8; font-size: 1.1rem; margin-bottom: 20px; color: var(--accent-blue); }
 
 .bio-container {
-    max-width: 800px;
-    margin: 15px auto;
-    font-size: 0.95rem;
+    max-width: 850px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    font-size: 1rem;
     opacity: 0.9;
-}
-
-.bio-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: bold;
+    text-align: center;
 }
 
 .tags-container {
-    margin-top: 30px;
     display: flex;
     justify-content: center;
+    gap: 15px;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
 .tag {
-    background: rgba(56, 189, 248, 0.15);
-    color: var(--accent-color);
-    padding: 6px 12px;
-    border-radius: 5px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    color: var(--text-main);
+    opacity: 0.6;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 4px 12px;
+    border-radius: 20px;
 }
-
-.tag.expert { background: rgba(16, 185, 129, 0.15); color: var(--action-color); }
-.tag.tech { background: rgba(56, 189, 248, 0.15); color: var(--accent-color); }
 
 .section-title {
-    text-align: center;
-    margin-top: 60px;
-    margin-bottom: 30px;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    border-bottom: 1px solid rgba(56, 189, 248, 0.2);
-    display: inline-block;
-    padding-bottom: 8px;
-    width: auto;
-}
-
-/* Grilles des projets et engagements */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    max-width: 1100px;
-    margin: auto;
-}
-
-.project-card {
-    background: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    border: 1px solid rgba(255,255,255,0.05);
-    transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent-color);
-}
-
-.project-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-img {
-    opacity: 1;
-}
-
-.project-content {
-    padding: 20px;
-}
-
-.project-content h3 {
-    margin-top: 0;
-    color: var(--accent-color);
-    font-size: 1.1rem;
-}
-
-.project-content p {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    margin-bottom: 15px;
-}
-
-/* Badges de statut */
-.status-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 4px 8px;
-    border-radius: 5px;
-    font-size: 0.65rem;
+    margin: 80px 0 40px;
+    color: var(--accent-blue);
+    font-size: 1.3rem;
+    letter-spacing: 3px;
     font-weight: bold;
-    color: white;
-    letter-spacing: 0.5px;
 }
 
-.badge-private { background: #ef4444; } /* Rouge pour privé */
-.badge-confidential { background: #f59e0b; } /* Orange pour confidentiel */
-
-.tag-footer {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.05);
-    color: rgba(255, 255, 255, 0.7);
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.7rem;
-    margin-top: 10px;
+.projects-grid, .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-/* Parcours Professionnel */
+.project-card, .impact-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: left;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.project-img { width: 100%; height: 200px; object-fit: cover; }
+.project-content { padding: 25px; }
+.project-content h3 { color: var(--accent-blue); margin-top: 0; }
+.tech-tag { font-size: 0.75rem; color: var(--accent-blue); font-weight: bold; }
+
 .experience-container {
-    max-width: 850px;
-    margin: 40px auto;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
     padding: 0 20px;
 }
 
 .exp-item {
-    border-left: 2px solid var(--accent-color);
-    padding-left: 20px;
-    margin-bottom: 25px;
-    position: relative;
+    border-left: 2px solid var(--accent-blue);
+    padding-left: 25px;
+    margin-bottom: 40px;
 }
 
 .exp-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
-.exp-header h4 {
-    margin: 0;
-    color: var(--accent-color);
-    font-size: 1.05rem;
+.exp-header h4 { color: var(--accent-blue); margin: 0; font-size: 1.1rem; }
+
+/* La date reste en BLEU d'origine comme demandé */
+.date { 
+    font-size: 0.85rem; 
+    color: var(--accent-blue); 
+    font-weight: bold; 
+    background: rgba(56, 189, 248, 0.1); 
+    padding: 2px 8px; 
+    border-radius: 4px; 
 }
 
-.exp-header span {
-    font-size: 0.8rem;
-    opacity: 0.6;
-    font-weight: bold;
-}
-
-.exp-item p {
-    margin: 0;
-    font-size: 0.9rem;
-    opacity: 0.8;
-    line-height: 1.4;
-}
-
-/* Certifications */
-.certification-container {
+.cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
     max-width: 1100px;
-    margin: 40px auto;
+    margin: 0 auto;
     padding: 0 20px;
 }
 
-.cert-item {
-    background: rgba(255,255,255,0.03);
-    padding: 15px;
-    border-radius: 10px;
+.cert-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 20px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     gap: 15px;
-    border: 1px solid rgba(56, 189, 248, 0.1);
-    transition: transform 0.3s ease, background 0.3s ease;
+    text-align: left;
 }
 
-.cert-item:hover {
-    transform: translateY(-3px);
-    background: rgba(56, 189, 248, 0.05);
+.cert-icon { font-size: 1.8rem; }
+.cert-info h4 { margin: 0; font-size: 0.95rem; color: var(--accent-blue); }
+.cert-info p { margin: 5px 0 0; font-size: 0.8rem; opacity: 0.6; }
+
+.impact-card { padding: 30px; position: relative; }
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 0.65rem;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.cert-icon {
-    font-size: 1.5rem;
-    color: var(--action-color); /* Icônes en vert */
-}
+.card-purple { border-top: 4px solid #d946ef; }
+.badge-purple { background: #d946ef; color: white; }
 
-.cert-text h4 {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--accent-color);
-}
+.card-green { border-top: 4px solid #10b981; }
+.badge-green { background: #10b981; color: white; }
 
-.cert-text p {
-    margin: 0;
-    font-size: 0.8rem;
-    opacity: 0.7;
-}
+.card-red { border-top: 4px solid #ef4444; }
+.badge-red { background: #ef4444; color: white; }
 
-/* Boutons généraux */
-.btn {
-    display: inline-block;
-    padding: 8px 15px;
-    border-radius: 6px;
+.btn-blue { background: var(--accent-blue); color: var(--bg-color); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; display: inline-block; }
+.btn-outline { border: 1px solid var(--accent-blue); color: var(--accent-blue); padding: 9px 19px; border-radius: 6px; text-decoration: none; font-size: 0.85rem; display: inline-block; }
+.btn-outline-white { border: 1px solid rgba(255,255,255,0.2); color: white; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.8rem; display: inline-block; margin-top: 15px; }
+.btn-link { color: var(--accent-blue); text-decoration: underline; font-size: 0.85rem; margin-left: 15px; }
+
+footer { padding: 80px 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 80px; }
+.footer-links { margin-bottom: 25px; }
+.footer-links a { color: var(--accent-blue); text-decoration: none; margin: 0 15px; font-weight: bold; }
+
+/* Uniquement Mentions Légales en Orange */
+.legal-link {
+    color: var(--orange-legal);
     text-decoration: none;
     font-weight: bold;
-    font-size: 0.8rem;
-    margin-top: 10px;
-    transition: 0.3s;
-    text-
+    margin-left: 5px;
+}
