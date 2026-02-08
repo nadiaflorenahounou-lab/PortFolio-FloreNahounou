@@ -3,143 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadia Flore NAHOUNOU | Portfolio Expert</title>
-    <link rel="stylesheet" href="style.css?v=49.0">
+    <title>Nadia Flore NAHOUNOU | Portfolio Officiel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <nav>
+        <div class="logo">PortFolio-FN</div>
+        <ul class="nav-links">
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <header>
-        <img src="moi.jpg" alt="Nadia Flore NAHOUNOU" class="profile-img">
-        <h1>Nadia Flore NAHOUNOU</h1>
-        <p class="specialist-title">Chargée de Communication & Mobilisation Communautaire (DGCMU)</p>
-        
-        <div class="bio-container">
-            <p>Chargée de Communication et de Mobilisation Communautaire à la DGCMU, j'assure l'interface entre l'institution, la Banque Mondiale et la société civile. Experte en sensibilisation sociale, je propulse aujourd'hui la transformation numérique de la santé.</p>
-        </div>
-
-        <div class="tags-container">
-            <span class="tag-blue">Communication Institutionnelle</span>
-            <span class="tag-blue">Mobilisation Communautaire</span>
-            <span class="tag-blue">Développeuse Fullstack</span>
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1>Nadia Flore NAHOUNOU</h1>
+            <p>Chargée de Communication & Mobilisation Communautaire | Développeuse Fullstack</p>
+            <div class="certif-main"><i class="fas fa-award"></i> Certifiée par la DGCMU</div>
+            <a href="#projects" class="btn">Explorer mes réalisations</a>
         </div>
     </header>
 
-    <h2 class="section-title">SOLUTIONS NUMÉRIQUES</h2>
-    <div class="projects-grid">
-        <div class="project-card">
-            <img src="devjourney.jpeg" alt="Dev Journey" class="project-img">
-            <div class="project-content">
-                <h3>Dev Journey</h3>
-                <p>Blog technique retraçant mon parcours de développeuse.</p>
-                <a href="https://nadiaflorenahounou-lab.github.io/devjourney/" target="_blank" class="btn-white">Visiter</a>
+    <section id="projects" class="projects">
+        <h2 class="section-title">Mes Réalisations</h2>
+        <div class="projects-grid">
+            
+            <div class="project-card">
+                <div class="card-icon"><i class="fas fa-hand-holding-medical fa-3x"></i></div>
+                <div class="card-content">
+                    <span class="status">En cours</span>
+                    <h3>CMU SMART</h3>
+                    <p>Digitalisation du parcours de santé.</p>
+                    <span class="badge private">Propriété Privée</span>
+                    <a href="cmu-smart.html" class="btn-secondary">Détails</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <img src="ecommerce.jpeg" alt="Delaroche Fashion" class="project-img">
-            <div class="project-content">
-                <h3>Delaroche Fashion</h3>
-                <p>E-commerce Vêtements : Solution de vente en ligne complète.</p>
-                <a href="https://nadiaflorenahounou-lab.github.io/ecommerce/" target="_blank" class="btn-white">Démo</a>
+            <div class="project-card">
+                <div class="card-icon"><i class="fas fa-file-shield fa-3x"></i></div>
+                <div class="card-content">
+                    <span class="status">En cours</span>
+                    <h3>DGCMU HUB FLOW</h3>
+                    <p>GED et traçabilité administrative.</p>
+                    <span class="badge private">Confidentiel</span>
+                    <a href="hub-flow.html" class="btn-secondary">Détails</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="status-badge badge-orange">Propriété Privée</div>
-            <img src="application mobile cmu smart.png" alt="CMU Smart" class="project-img">
-            <div class="project-content">
-                <h3>CMU Smart</h3>
-                <p>Digitalisation santé pour la DGCMU. Bientôt disponible.</p>
-                <a href="cmu-smart.html" class="btn-white">Détails</a>
+            <div class="project-card">
+                <div class="card-icon"><i class="fas fa-users-rays fa-3x"></i></div>
+                <div class="card-content">
+                    <h3>NIANGON MA FIERTÉ</h3>
+                    <p>Impact social et mobilisation citoyenne.</p>
+                    <a href="niangon-impact.html" class="btn-secondary">L'impact</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="status-badge badge-red">Confidentiel</div>
-            <img src="dgcmu hub flow.png" alt="Hub Flow" class="project-img">
-            <div class="project-content">
-                <h3>DGCMU Hub Flow</h3>
-                <p>Système d'archivage numérique institutionnel sécurisé.</p>
-                <a href="hub-flow.html" class="btn-white">Détails</a>
+            <div class="project-card">
+                <div class="card-image-container"><img src="dev journey.jpeg" alt="Dev Journey"></div>
+                <div class="card-content">
+                    <h3>MON DEV JOURNEY</h3>
+                    <p>Mon parcours de formation technique.</p>
+                    <a href="dev-journey.html" class="btn-secondary">Parcours</a>
+                </div>
             </div>
-        </div>
 
-        <div class="project-card">
-            <div class="status-badge badge-orange">En cours</div>
-            <img src="site niangon ma fierte.png" alt="Niangon Ma Fierté" class="project-img">
-            <div class="project-content">
-                <h3>Niangon Ma Fierté</h3>
-                <p>Valorisation digitale des actions citoyennes de Niangon.</p>
-                <a href="niangon-impact.html" class="btn-white">Impact</a>
+            <div class="project-card">
+                <div class="card-image-container"><img src="ecommerce.jpeg" alt="E-commerce"></div>
+                <div class="card-content">
+                    <h3>E-COMMERCE</h3>
+                    <p>Boutique en ligne moderne et responsive.</p>
+                    <a href="ecommerce.html" class="btn-secondary">Boutique</a>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <h2 class="section-title">CERTIFICATIONS CLÉS</h2>
-    <div class="cert-grid">
-        <div class="cert-card">
-            <span class="cert-icon">📜</span>
-            <div class="cert-info">
-                <h4>Certificat DGCMU</h4>
-                <p>Spécialisation Santé | 2025</p>
-            </div>
         </div>
-        <a href="https://www.facebook.com/share/1CyDbhGkRz/" target="_blank" class="cert-card">
-            <span class="cert-icon">🩺</span>
-            <div class="cert-info">
-                <h4>Open Academy Dakar</h4>
-                <p>Santé Communautaire | 2025</p>
-            </div>
-        </a>
-        <a href="https://ccp.jhu.edu/" target="_blank" class="cert-card">
-            <span class="cert-icon">🏛️</span>
-            <div class="cert-info">
-                <h4>Johns Hopkins CCP</h4>
-                <p>Leadership & Com | 2024</p>
-            </div>
-        </a>
-    </div>
+    </section>
 
-    <h2 class="section-title">PARCOURS PROFESSIONNEL & IMPACT</h2>
-    <div class="experience-container">
-        <div class="exp-item">
-            <div class="exp-header">
-                <a href="https://www.facebook.com/ministeredelareconciliationci" target="_blank"><h4>Min. de la Réconciliation</h4></a>
-                <span class="date">2022 – 2023</span>
-            </div>
-            <p>Assistante du Dir. Cab. Adjoint : Coordination institutionnelle.</p>
+    <section id="contact" class="contact">
+        <h2>Me Contacter</h2>
+        <div class="contact-links">
+            <a href="mailto:votre-email@exemple.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="https://www.linkedin.com/in/nadia-flore-nahounou-a51842351/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
         </div>
-        <div class="exp-item">
-            <div class="exp-header">
-                <a href="https://www.facebook.com/share/1GEukErPB1/" target="_blank"><h4>Agence WHYNOT</h4></a>
-                <span class="date">2019 - À ce jour</span>
-            </div>
-            <p>Responsable Communication : Coordination de grands festivals.</p>
-        </div>
-        <div class="exp-item">
-            <div class="exp-header">
-                <a href="https://www.facebook.com/share/18J8Jawoxf/" target="_blank"><h4>Ivoire TV & FM</h4></a>
-                <span class="date">2017 - 2021</span>
-            </div>
-            <p>Assistante Commerciale : Gestion publicitaire.</p>
-        </div>
-        <div class="exp-item">
-            <div class="exp-header">
-                <a href="https://www.facebook.com/share/17EvhybL2j/" target="_blank"><h4>EWA (Empowering Women Africa)</h4></a>
-                <span class="date">Depuis 2025</span>
-            </div>
-            <p>Membre d'Honneur : Promotion de l'ODD 4.</p>
-        </div>
-    </div>
+    </section>
 
-    <footer>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/nadia-flore-nahounou-a51842351/" target="_blank">LinkedIn</a>
-            <a href="mailto:nadiaflorenahounou@gmail.com">Contact Direct (Email)</a>
-        </div>
-        <p>© 2026 <strong>Nadia Flore NAHOUNOU</strong> | <a href="mentions-legales.html" class="legal-link">Mentions Légales</a></p>
-    </footer>
-
-    <script src="script.js"></script>
+    <footer><p>&copy; 2026 Nadia Flore NAHOUNOU. Certifiée DGCMU.</p></footer>
 </body>
 </html>

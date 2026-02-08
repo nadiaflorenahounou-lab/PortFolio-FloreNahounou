@@ -1,44 +1,43 @@
 :root {
-    --bg-color: #0d1425;
-    --card-bg: #1a233a;
-    --text-main: #f8fafc;
-    --accent-blue: #38bdf8;
-    --orange-accent: #f97316;
+    --primary: #2c3e50;
+    --accent: #e67e22;
+    --success: #27ae60;
+    --danger: #e74c3c;
+    --light: #f4f7f6;
 }
 
-body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Segoe UI', sans-serif; margin: 0; text-align: center; line-height: 1.6; }
-header { padding: 60px 20px; }
-.profile-img { width: 130px; height: 130px; border-radius: 50%; border: 3px solid var(--accent-blue); object-fit: cover; margin-bottom: 20px; }
-h1 { font-size: 2.5rem; margin: 10px 0; }
-.specialist-title { color: var(--accent-blue); font-size: 1.1rem; }
-.bio-container { max-width: 850px; margin: 0 auto 30px; opacity: 0.9; }
-.tags-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
-.tag-blue { font-size: 0.85rem; color: var(--text-main); border: 1.5px solid var(--accent-blue); padding: 6px 15px; border-radius: 20px; background: rgba(56, 189, 248, 0.05); font-weight: 500; }
-.section-title { margin: 80px 0 40px; color: var(--accent-blue); font-size: 1.3rem; letter-spacing: 3px; font-weight: bold; }
-.status-badge { position: absolute; top: 15px; right: 15px; padding: 5px 12px; border-radius: 5px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; color: white; }
-.badge-orange { background-color: var(--orange-accent); }
-.projects-grid, .impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-.project-card, .impact-card { background: var(--card-bg); border-radius: 15px; overflow: hidden; text-align: left; position: relative; border: 1px solid rgba(255,255,255,0.05); }
-.project-img { width: 100%; height: 200px; object-fit: cover; }
-.project-content { padding: 25px; }
-.btn-white { background: white; color: var(--bg-color); padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.85rem; display: inline-block; }
-.btn-outline-white { border: 1px solid rgba(255,255,255,0.2); color: white; padding: 8px 18px; border-radius: 6px; text-decoration: none; font-size: 0.8rem; display: inline-block; margin-top: 15px; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+body { background: var(--light); color: #333; }
 
-/* PROGRESS BAR */
-.progress-container { width: 100%; background: rgba(255,255,255,0.1); border-radius: 10px; height: 12px; margin: 20px 0; overflow: hidden; }
-.progress-bar { height: 100%; background: linear-gradient(90deg, var(--accent-blue), var(--orange-accent)); width: 0; animation: load 2s ease-out forwards; }
-@keyframes load { to { width: 75%; } }
+nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
 
-.experience-container { max-width: 900px; margin: 0 auto; text-align: left; padding: 0 20px; }
-.exp-item { border-left: 2px solid var(--accent-blue); padding-left: 25px; margin-bottom: 40px; }
-.date { font-size: 0.85rem; color: var(--accent-blue); font-weight: bold; }
-.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.cert-card { background: rgba(255, 255, 255, 0.03); padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(255,255,255,0.05); }
-.impact-card { padding: 30px; }
-.badge-tag { position: absolute; top: 15px; right: 15px; font-size: 0.65rem; padding: 4px 10px; border-radius: 5px; font-weight: bold; text-transform: uppercase; color: white; }
-.card-purple { border-top: 4px solid #d946ef; } .tag-purple { background: #d946ef; }
-.card-green { border-top: 4px solid #10b981; } .tag-green { background: #10b981; }
-.card-red { border-top: 4px solid #ef4444; } .tag-red { background: #ef4444; }
-footer { padding: 80px 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: 80px; }
-.footer-links a { color: var(--accent-blue); text-decoration: none; margin: 0 15px; font-weight: bold; }
-.legal-link { color: var(--orange-accent); text-decoration: none; font-weight: bold; }
+.hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('moi.jpg') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.certif-main { margin-top: 10px; color: var(--success); font-weight: bold; font-size: 1.2rem; }
+
+.projects { padding: 4rem 5%; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+
+.project-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; padding-bottom: 20px; text-align: center; }
+.project-card:hover { transform: translateY(-10px); }
+.card-image-container img { width: 100%; height: 180px; object-fit: cover; }
+.card-icon { padding: 30px; color: var(--accent); }
+
+.status { background: #d6eaf8; color: #2e86c1; padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; }
+.badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--accent); color: var(--accent); margin: 10px 0; }
+
+.btn { background: var(--accent); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+.btn-secondary { color: var(--accent); border: 2px solid var(--accent); padding: 8px 20px; border-radius: 5px; text-decoration: none; }
+
+.container { max-width: 800px; margin: 3rem auto; padding: 0 20px; }
+.project-header { text-align: center; margin-bottom: 2rem; }
+.status-tag { background: var(--primary); color: white; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; }
+.certif-badge { color: var(--success); border: 2px solid var(--success); padding: 5px 15px; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; }
+
+.confidential-badge { padding: 20px; border-radius: 5px; display: flex; align-items: center; gap: 15px; margin-top: 2rem; }
+.confidential-badge.warning { background: #fffaf0; border-left: 5px solid var(--accent); }
+.confidential-badge.critical { background: #fef2f2; border-left: 5px solid var(--danger); }
+
+footer { background: var(--primary); color: white; text-align: center; padding: 2rem; }
