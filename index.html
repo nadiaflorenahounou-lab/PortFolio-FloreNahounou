@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadia Flore NAHOUNOU | Portfolio</title>
+    <title>Nadia Flore NAHOUNOU | Portfolio Pro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,58 +12,54 @@
         <div class="header-content">
             <img src="moi.jpg" alt="Nadia Flore" class="profile-pic">
             <h1>Nadia Flore NAHOUNOU</h1>
-            <p class="bio">Développeuse Fullstack & Mobile : Je transforme vos idées en expériences numériques fluides et performantes, du Web au Mobile.</p>
+            <p class="bio">Développeuse Fullstack & Mobile spécialisée dans les solutions numériques de santé publique. Expertise combinée en React/JS et communication communautaire.</p>
         </div>
     </header>
-
-    <section id="skills">
-        <h2>Compétences</h2>
-        <div class="tags">
-            <span class="tag">HTML5</span> <span class="tag">CSS3</span> 
-            <span class="tag">Javascript</span> <span class="tag">WordPress</span>
-            <span class="tag">React js</span> <span class="tag">React Native</span>
-        </div>
-    </section>
 
     <section id="projects">
         <h2>Mes Réalisations</h2>
         <div class="projects-grid">
+            
             <div class="project-card">
                 <img src="DEV JOURNEY.jpeg" alt="Dev Journey" class="project-img">
                 <h3>My Dev Journey</h3>
-                <p>Mon carnet de bord d'apprentissage.</p>
+                <p>Mon carnet de bord d'apprentissage technique.</p>
                 <button class="btn-more" onclick="openModal('journey')">Voir plus</button>
             </div>
             
             <div class="project-card">
                 <img src="E COMMERCE.jpeg" alt="Delaroche Fashion" class="project-img">
                 <h3>Delaroche Fashion</h3>
-                <p>Boutique en ligne interactive.</p>
+                <p>Boutique en ligne interactive de mode.</p>
                 <button class="btn-more" onclick="openModal('ecommerce')">Voir plus</button>
             </div>
 
             <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="WordPress" class="project-img">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="Niangon ma Fierté" class="project-img">
                 <h3>Niangon ma Fierté</h3>
-                <p>Plateforme communautaire WordPress.</p>
+                <p>Plateforme communautaire WordPress valorisant le patrimoine local.</p>
                 <button class="btn-more" onclick="openModal('wordpress')">Voir plus</button>
             </div>
 
-            <div class="project-card">
-                <div class="status-badge">WIP</div>
-                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=500" alt="Archive" class="project-img">
-                <h3>DGCMU Hub Flow</h3>
-                <p>Système de gestion documentaire.</p>
-                <button class="btn-more" onclick="openModal('archive')">Voir plus</button>
+            <div class="project-card" style="border: 2px solid #38bdf8;">
+                <div class="status-badge">MOBILE</div>
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500" alt="CMU Smart" class="project-img">
+                <h3>CMU Smart</h3>
+                <p>Application mobile d'accès aux soins.</p>
+                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
+                    <a href="cmu-smart.html" class="btn-more" style="text-decoration: none; font-size: 0.8rem; text-align: center;">📖 Détails</a>
+                    <a href="app.apk" download="CMU-Smart-Nadia.apk" style="background: #10b981; color: white; padding: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-align: center;">📥 Télécharger l'APK</a>
+                </div>
             </div>
 
             <div class="project-card">
-                <div class="status-badge">Bêta</div>
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500" alt="Santé" class="project-img">
-                <h3>CMU Smart</h3>
-                <p>Géolocalisation et accès aux soins.</p>
-                <button class="btn-more" onclick="openModal('cmu')">Voir plus</button>
+                <div class="status-badge">ARCHIVAGE</div>
+                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=500" alt="DGCMU Hub Flow" class="project-img">
+                <h3>DGCMU Hub Flow</h3>
+                <p>Système de gestion documentaire et d'archivage numérique.</p>
+                <button class="btn-more" onclick="openModal('archive')">Voir les détails</button>
             </div>
+
         </div>
     </section>
 
