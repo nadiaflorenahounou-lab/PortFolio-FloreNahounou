@@ -8,9 +8,9 @@ header { padding: 40px 20px; text-align: center; }
 .bio-container { max-width: 800px; margin: 15px auto; font-size: 0.95rem; }
 .bio-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
 
-.section-title { text-align: center; margin-top: 60px; color: var(--accent-color); text-transform: uppercase; font-size: 1.4rem; }
+.section-title { text-align: center; margin-top: 60px; color: var(--accent-color); text-transform: uppercase; font-size: 1.2rem; letter-spacing: 1px; }
 
-/* Grilles et Cartes */
+/* Grilles */
 .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
 .project-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
 .project-img { width: 100%; height: 160px; object-fit: cover; opacity: 0.8; }
@@ -19,21 +19,24 @@ header { padding: 40px 20px; text-align: center; }
 /* Expérience */
 .experience-container { max-width: 850px; margin: auto; padding: 20px; }
 .exp-item { border-left: 2px solid var(--accent-color); padding-left: 20px; margin-bottom: 25px; }
-.exp-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--accent-color); }
+.exp-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--accent-color); font-size: 0.95rem; }
 
 /* Certifications */
-.certification-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 1100px; margin: auto; padding: 20px; }
-.cert-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; }
+.certification-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; max-width: 1100px; margin: auto; padding: 20px; }
+.cert-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; border: 1px solid rgba(56, 189, 248, 0.1); }
 .cert-icon { font-size: 1.5rem; }
 .cert-text h4 { margin: 0; font-size: 0.9rem; color: var(--accent-color); }
 .cert-text p { margin: 0; font-size: 0.8rem; opacity: 0.7; }
 
-/* Boutons et Badges */
-.btn { display: inline-block; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; margin-top: 10px; text-align: center;}
+/* Boutons */
+.btn { display: inline-block; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; margin-top: 10px; transition: 0.3s; }
 .btn-blue { background: var(--accent-color); color: var(--bg-color); }
 .btn-outline { border: 1px solid var(--accent-color); color: var(--accent-color); }
 .status-badge { position: absolute; top: 10px; right: 10px; padding: 4px 8px; border-radius: 5px; font-size: 0.6rem; font-weight: bold; color: white; }
 .badge-private { background: #ef4444; }
 
-footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); }
-.social-icon { color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: bold; }
+/* FOOTER & MENTIONS LÉGALES */
+footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 50px; }
+.social-icon { color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: bold; font-size: 0.9rem; }
+.legal-link { color: var(--warning-color); text-decoration: none; font-weight: bold; transition: 0.3s; margin-left: 5px; }
+.legal-link:hover { text-decoration: underline; opacity: 0.8; }
