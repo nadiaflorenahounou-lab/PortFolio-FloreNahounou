@@ -1,43 +1,68 @@
 :root {
-    --primary: #2c3e50;
-    --accent: #e67e22;
-    --success: #27ae60;
-    --danger: #e74c3c;
-    --light: #f4f7f6;
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent-blue: #38bdf8;
+    --accent-green: #4ade80;
+    --accent-orange: #f97316;
+    --text-main: #ffffff;
+    --text-dim: #cbd5e1;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: var(--light); color: #333; }
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+}
 
-nav { background: var(--primary); color: white; padding: 1rem 5%; display: flex; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-.nav-links { display: flex; list-style: none; }
-.nav-links li { margin-left: 20px; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+/* Photo & Hero Section */
+.hero { text-align: center; padding: 80px 5%; background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%); }
+.profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--accent-blue); object-fit: cover; margin-bottom: 20px; box-shadow: 0 0 20px rgba(56, 189, 248, 0.2); }
 
-.hero { height: 60vh; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('moi.jpg') center/cover; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
-.certif-main { margin-top: 10px; color: var(--success); font-weight: bold; font-size: 1.2rem; }
+.subtitle { color: var(--accent-blue); font-size: 1.2rem; font-weight: 600; margin-bottom: 15px; }
+.description { max-width: 800px; margin: auto; color: var(--text-dim); font-size: 1.1rem; }
 
-.projects { padding: 4rem 5%; }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+/* Grille de Projets */
+section { padding: 60px 5%; max-width: 1200px; margin: auto; }
+.section-title { color: var(--accent-blue); text-transform: uppercase; letter-spacing: 3px; border-left: 4px solid var(--accent-blue); padding-left: 20px; margin-bottom: 40px; }
 
-.project-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: 0.3s; padding-bottom: 20px; text-align: center; }
-.project-card:hover { transform: translateY(-10px); }
-.card-image-container img { width: 100%; height: 180px; object-fit: cover; }
-.card-icon { padding: 30px; color: var(--accent); }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
 
-.status { background: #d6eaf8; color: #2e86c1; padding: 2px 10px; border-radius: 10px; font-size: 0.8rem; font-weight: bold; }
-.badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid var(--accent); color: var(--accent); margin: 10px 0; }
+.project-card { 
+    background: var(--card-bg); 
+    border-radius: 15px; 
+    overflow: hidden; 
+    position: relative; 
+    transition: 0.3s; 
+    border: 1px solid rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+}
 
-.btn { background: var(--accent); color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: bold; }
-.btn-secondary { color: var(--accent); border: 2px solid var(--accent); padding: 8px 20px; border-radius: 5px; text-decoration: none; }
+.project-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
 
-.container { max-width: 800px; margin: 3rem auto; padding: 0 20px; }
-.project-header { text-align: center; margin-bottom: 2rem; }
-.status-tag { background: var(--primary); color: white; padding: 5px 15px; border-radius: 5px; font-size: 0.8rem; }
-.certif-badge { color: var(--success); border: 2px solid var(--success); padding: 5px 15px; border-radius: 50px; display: inline-block; margin-top: 15px; font-weight: bold; }
+/* Visuels des cartes */
+.card-visual, .card-visual-img { height: 200px; width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; background: #0f172a; }
+.card-visual-img img { width: 100%; height: 100%; object-fit: cover; }
+.card-visual i { color: var(--accent-blue); opacity: 0.8; }
 
-.confidential-badge { padding: 20px; border-radius: 5px; display: flex; align-items: center; gap: 15px; margin-top: 2rem; }
-.confidential-badge.warning { background: #fffaf0; border-left: 5px solid var(--accent); }
-.confidential-badge.critical { background: #fef2f2; border-left: 5px solid var(--danger); }
+.card-body { padding: 25px; flex-grow: 1; }
+.card-body h3 { margin-top: 0; color: var(--accent-blue); }
 
-footer { background: var(--primary); color: white; text-align: center; padding: 2rem; }
+/* Badges & Boutons */
+.badge-orange { position: absolute; top: 15px; right: 15px; background: var(--accent-orange); color: white; padding: 6px 15px; border-radius: 5px; font-size: 0.75rem; font-weight: bold; z-index: 10; }
+
+.btn-group { display: flex; gap: 12px; margin-top: 20px; }
+.btn-white { background: white; color: #0f172a; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; }
+.btn-white:hover { background: var(--accent-blue); color: white; }
+.btn-green { background: var(--accent-green); color: #064e3b; padding: 10px 18px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+
+/* Compétences & Footer */
+.skills-list { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; }
+.skill-item { background: #334155; padding: 8px 18px; border-radius: 50px; font-size: 0.9rem; border: 1px solid rgba(255,255,255,0.1); }
+
+footer { text-align: center; padding: 80px 5%; border-top: 1px solid rgba(255,255,255,0.1); }
+.contact-icons a { color: var(--text-dim); margin: 0 20px; transition: 0.3s; }
+.contact-icons a:hover { color: var(--accent-blue); }
+.legal-link a { color: var(--text-dim); text-decoration: none; font-size: 0.85rem; opacity: 0.6; }

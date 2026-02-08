@@ -3,93 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nadia Flore NAHOUNOU | Portfolio Officiel</title>
+    <title>Nadia Flore NAHOUNOU | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav>
-        <div class="logo">PortFolio-FN</div>
-        <ul class="nav-links">
-            <li><a href="#home">Accueil</a></li>
-            <li><a href="#projects">Projets</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
 
-    <header id="home" class="hero">
-        <div class="hero-content">
-            <h1>Nadia Flore NAHOUNOU</h1>
-            <p>Chargée de Communication & Mobilisation Communautaire | Développeuse Fullstack</p>
-            <div class="certif-main"><i class="fas fa-award"></i> Certifiée par la DGCMU</div>
-            <a href="#projects" class="btn">Explorer mes réalisations</a>
-        </div>
+    <header class="hero">
+        <img src="moi.jpg" class="profile-img" alt="Nadia Flore NAHOUNOU">
+        <h1>Nadia Flore NAHOUNOU</h1>
+        <p class="subtitle">Chargée de Communication & Développeuse Fullstack</p>
+        <p class="description">
+            Spécialisée en mobilisation communautaire et solutions numériques. 
+            J'accompagne la DGCMU dans la transformation digitale de l'accès à la santé.
+        </p>
     </header>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Mes Réalisations</h2>
+    <section id="projects">
+        <h2 class="section-title">Solutions Numériques</h2>
         <div class="projects-grid">
             
             <div class="project-card">
-                <div class="card-icon"><i class="fas fa-hand-holding-medical fa-3x"></i></div>
-                <div class="card-content">
-                    <span class="status">En cours</span>
+                <div class="badge-orange">PROPRIÉTÉ PRIVÉE</div>
+                <div class="card-visual">
+                    <i class="fas fa-hand-holding-medical fa-4x"></i>
+                </div>
+                <div class="card-body">
                     <h3>CMU SMART</h3>
-                    <p>Digitalisation du parcours de santé.</p>
-                    <span class="badge private">Propriété Privée</span>
-                    <a href="cmu-smart.html" class="btn-secondary">Détails</a>
+                    <p>Digitalisation du parcours de santé assuré. Projet en cours de déploiement.</p>
+                    <div class="btn-group">
+                        <a href="cmu-smart.html" class="btn-white">Fiche Projet</a>
+                        <a href="mailto:ton-email@gmail.com" class="btn-green">APK</a>
+                    </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="card-icon"><i class="fas fa-file-shield fa-3x"></i></div>
-                <div class="card-content">
-                    <span class="status">En cours</span>
+                <div class="badge-orange">CONFIDENTIEL</div>
+                <div class="card-visual">
+                    <i class="fas fa-database fa-4x"></i>
+                </div>
+                <div class="card-body">
                     <h3>DGCMU HUB FLOW</h3>
-                    <p>GED et traçabilité administrative.</p>
-                    <span class="badge private">Confidentiel</span>
-                    <a href="hub-flow.html" class="btn-secondary">Détails</a>
+                    <p>Système de GED et traçabilité documentaire institutionnelle.</p>
+                    <div class="btn-group">
+                        <a href="hub-flow.html" class="btn-white">Fiche Projet</a>
+                    </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="card-icon"><i class="fas fa-users-rays fa-3x"></i></div>
-                <div class="card-content">
-                    <h3>NIANGON MA FIERTÉ</h3>
-                    <p>Impact social et mobilisation citoyenne.</p>
-                    <a href="niangon-impact.html" class="btn-secondary">L'impact</a>
+                <div class="card-visual-img">
+                    <img src="dev journey.jpeg" alt="Mon parcours Dev">
                 </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-image-container"><img src="dev journey.jpeg" alt="Dev Journey"></div>
-                <div class="card-content">
+                <div class="card-body">
                     <h3>MON DEV JOURNEY</h3>
-                    <p>Mon parcours de formation technique.</p>
-                    <a href="dev-journey.html" class="btn-secondary">Parcours</a>
+                    <p>Parcours technique et technologies maîtrisées durant ma formation.</p>
+                    <div class="btn-group">
+                        <a href="dev-journey.html" class="btn-white">Voir le parcours</a>
+                    </div>
                 </div>
             </div>
 
             <div class="project-card">
-                <div class="card-image-container"><img src="ecommerce.jpeg" alt="E-commerce"></div>
-                <div class="card-content">
-                    <h3>E-COMMERCE</h3>
-                    <p>Boutique en ligne moderne et responsive.</p>
-                    <a href="ecommerce.html" class="btn-secondary">Boutique</a>
+                <div class="card-visual-img">
+                    <img src="ecommerce.jpeg" alt="Projet E-commerce">
+                </div>
+                <div class="card-body">
+                    <h3>PLATEFORME E-COMMERCE</h3>
+                    <p>Création d'une boutique en ligne moderne et responsive.</p>
+                    <div class="btn-group">
+                        <a href="ecommerce.html" class="btn-white">La boutique</a>
+                    </div>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <h2>Me Contacter</h2>
-        <div class="contact-links">
-            <a href="mailto:votre-email@exemple.com"><i class="fas fa-envelope"></i> Email</a>
-            <a href="https://www.linkedin.com/in/nadia-flore-nahounou-a51842351/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <section id="skills">
+        <h2 class="section-title">Compétences & Certificats</h2>
+        <ul class="skills-list">
+            <li class="skill-item">Mobilisation Communautaire</li>
+            <li class="skill-item">HTML / CSS / JavaScript</li>
+            <li class="skill-item">Gestion Électronique des Documents</li>
+            <li class="skill-item">Communication Institutionnelle</li>
+        </ul>
+        <div style="margin-top: 30px; background: rgba(74, 222, 128, 0.1); padding: 20px; border-radius: 10px; border-left: 4px solid var(--accent-green);">
+            <p style="margin: 0; font-weight: bold; color: var(--accent-green);">
+                <i class="fas fa-award"></i> Certificat de fin de stage avec Mention d'Excellence - DGCMU
+            </p>
         </div>
     </section>
 
-    <footer><p>&copy; 2026 Nadia Flore NAHOUNOU. Certifiée DGCMU.</p></footer>
+    <footer>
+        <div class="contact-icons">
+            <a href="https://linkedin.com/in/nadia-flore-nahounou-a51842351/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="mailto:ton-email@gmail.com"><i class="fas fa-envelope fa-2x"></i></a>
+        </div>
+        <p style="margin: 30px 0 10px;">© 2026 Nadia Flore NAHOUNOU</p>
+        <p class="legal-link"><a href="cmu-smart.html#mentions">Mentions Légales & Confidentialité</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
