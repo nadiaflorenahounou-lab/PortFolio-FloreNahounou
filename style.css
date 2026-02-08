@@ -1,38 +1,39 @@
 :root {
     --bg-color: #0f172a; --card-bg: #1e293b; --text-color: #f8fafc;
     --accent-color: #38bdf8; --action-color: #10b981; --warning-color: #f59e0b;
-    --danger-color: #ef4444;
 }
 body { background-color: var(--bg-color); color: var(--text-color); font-family: 'Inter', sans-serif; margin: 0; line-height: 1.6; }
 header { padding: 40px 20px; text-align: center; }
-.profile-img { width: 125px; height: 125px; border-radius: 50%; border: 3px solid var(--accent-color); object-fit: cover; }
+.profile-img { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--accent-color); object-fit: cover; }
+.bio-container { max-width: 800px; margin: 15px auto; font-size: 0.95rem; }
+.bio-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
 
-.specialist-title { font-size: 1.3rem; color: var(--accent-color); font-weight: 700; margin-top: 15px; }
-.bio-container { max-width: 850px; margin: 15px auto; font-size: 0.95rem; opacity: 0.9; padding: 0 15px; }
-.section-title { text-align: center; margin: 60px 0 30px 0; font-size: 1.5rem; color: var(--accent-color); text-transform: uppercase; }
+.section-title { text-align: center; margin-top: 60px; color: var(--accent-color); text-transform: uppercase; font-size: 1.4rem; }
 
-.tags-container { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 15px; }
-.tag { padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; border: 1px solid; }
-.tag.expert { border-color: var(--warning-color); color: var(--warning-color); }
-.tag.tech { border-color: var(--accent-color); color: var(--accent-color); }
+/* Grilles et Cartes */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; padding: 20px; max-width: 1100px; margin: auto; }
+.project-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); }
+.project-img { width: 100%; height: 160px; object-fit: cover; opacity: 0.8; }
+.project-content { padding: 20px; }
 
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; padding: 20px; max-width: 1100px; margin: auto; }
-.project-card { background: var(--card-bg); border-radius: 12px; overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
-.project-card:hover { transform: translateY(-5px); border-color: var(--accent-color); }
+/* Expérience */
+.experience-container { max-width: 850px; margin: auto; padding: 20px; }
+.exp-item { border-left: 2px solid var(--accent-color); padding-left: 20px; margin-bottom: 25px; }
+.exp-header { display: flex; justify-content: space-between; font-weight: bold; color: var(--accent-color); }
 
-.status-badge { position: absolute; top: 10px; right: 10px; padding: 4px 10px; border-radius: 8px; font-size: 0.65rem; font-weight: bold; color: white; z-index: 5; }
-.badge-private { background: var(--danger-color); }
-.badge-confidential { background: var(--warning-color); }
+/* Certifications */
+.certification-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 1100px; margin: auto; padding: 20px; }
+.cert-item { background: rgba(255,255,255,0.03); padding: 15px; border-radius: 10px; display: flex; align-items: center; gap: 15px; }
+.cert-icon { font-size: 1.5rem; }
+.cert-text h4 { margin: 0; font-size: 0.9rem; color: var(--accent-color); }
+.cert-text p { margin: 0; font-size: 0.8rem; opacity: 0.7; }
 
-.project-img { width: 100%; height: 170px; object-fit: cover; }
-.project-content { padding: 25px; }
-
-.btn-group-secure { display: flex; gap: 8px; margin-top: 10px; }
-.btn { flex: 1; padding: 10px; border-radius: 6px; text-decoration: none; font-weight: bold; text-align: center; font-size: 0.8rem; }
+/* Boutons et Badges */
+.btn { display: inline-block; padding: 8px 15px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; margin-top: 10px; text-align: center;}
 .btn-blue { background: var(--accent-color); color: var(--bg-color); }
-.btn-green { background: var(--action-color); color: white; }
 .btn-outline { border: 1px solid var(--accent-color); color: var(--accent-color); }
+.status-badge { position: absolute; top: 10px; right: 10px; padding: 4px 8px; border-radius: 5px; font-size: 0.6rem; font-weight: bold; color: white; }
+.badge-private { background: #ef4444; }
 
-footer { text-align: center; padding: 60px 20px; border-top: 1px solid rgba(255,255,255,0.05); }
-.social-icon { color: var(--accent-color); text-decoration: none; font-weight: bold; padding: 8px 18px; border: 1px solid var(--accent-color); border-radius: 50px; margin: 0 5px; }
-.legal-link { color: var(--warning-color); text-decoration: none; font-size: 0.8rem; font-weight: bold; }
+footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255,255,255,0.1); }
+.social-icon { color: var(--accent-color); text-decoration: none; margin: 0 10px; font-weight: bold; }
