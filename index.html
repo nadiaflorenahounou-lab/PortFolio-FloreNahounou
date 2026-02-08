@@ -3,87 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAHOUNOU Mazo Nadia Flore | Portfolio Pro</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nadia Flore NAHOUNOU | Portfolio</title>
+    <link rel="stylesheet" href="style.css?v=2.1">
 </head>
 <body>
 
     <header>
-        <div class="header-content">
-            <img src="moi.jpg" alt="Nadia Flore" class="profile-pic">
-            <h1>NAHOUNOU Mazo Nadia Flore</h1>
-            <p class="bio">Développeuse Fullstack & Mobile spécialisée dans les solutions numériques de santé publique. Expertise en React/JS et transformation digitale.</p>
+        <img src="moi.jpg" alt="Nadia Flore NAHOUNOU" class="profile-img">
+        <h1>Nadia Flore NAHOUNOU</h1>
+        <p>Développeuse Fullstack | Experte en Solutions Digitales DGCMU</p>
+        
+        <div class="tags-container">
+            <span class="tag">HTML5</span><span class="tag">CSS3</span>
+            <span class="tag">Javascript</span><span class="tag">React js</span>
+            <span class="tag">React Native</span><span class="tag">WordPress</span>
         </div>
     </header>
 
-    <section id="projects">
-        <h2>Mes Réalisations</h2>
-        <div class="projects-grid">
-            
-            <div class="project-card">
-                <img src="DEV JOURNEY.jpeg" alt="Dev Journey" class="project-img">
-                <h3>My Dev Journey</h3>
-                <p>Mon carnet de bord d'apprentissage technique.</p>
-                <button class="btn-more" onclick="openModal('journey')">Voir plus</button>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="devjourney.jpeg" alt="Dev Journey" class="project-img">
+            <div class="project-content">
+                <h3>Bienvenue sur Dev Journey</h3>
+                <p>Journal de bord technique retraçant mon apprentissage au quotidien.</p>
+                <a href="https://nadiaflorenahounou-lab.github.io/devjourney/" target="_blank" class="btn btn-blue">Accéder au site</a>
             </div>
-            
-            <div class="project-card">
-                <img src="E COMMERCE.jpeg" alt="Delaroche Fashion" class="project-img">
-                <h3>Delaroche Fashion</h3>
-                <p>Boutique en ligne interactive de mode.</p>
-                <button class="btn-more" onclick="openModal('ecommerce')">Voir plus</button>
-            </div>
-
-            <div class="project-card">
-                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500" alt="Niangon ma Fierté" class="project-img">
-                <h3>Niangon ma Fierté</h3>
-                <p>Plateforme communautaire WordPress.</p>
-                <button class="btn-more" onclick="openModal('wordpress')">Voir plus</button>
-            </div>
-
-            <div class="project-card" style="border: 2px solid #38bdf8;">
-                <div class="status-badge" style="background: #38bdf8;">PROPRIÉTÉ PRIVÉE</div>
-                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500" alt="CMU Smart" class="project-img">
-                <h3>CMU Smart</h3>
-                <p>Application mobile d'accès aux soins (Accès restreint).</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
-                    <a href="cmu-smart.html" class="btn-more" style="text-decoration: none; font-size: 0.8rem; text-align: center;">📖 Fiche Projet</a>
-                    <a href="https://wa.me/2250709189580?text=Bonjour%20Nadia,%20je%20souhaiterais%20tester%20la%20démo%20de%20CMU%20Smart." 
-                       target="_blank"
-                       style="background: #25D366; color: white; padding: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-align: center;">
-                        📩 Demander l'APK
-                    </a>
-                </div>
-            </div>
-
-            <div class="project-card" style="border: 1px solid #f59e0b;">
-                <div class="status-badge" style="background: #f59e0b;">CONFIDENTIEL</div>
-                <img src="https://images.unsplash.com/photo-1568667256549-094345857637?w=500" alt="DGCMU Hub Flow" class="project-img">
-                <h3>DGCMU Hub Flow</h3>
-                <p>Système de gestion documentaire (Accès sur demande).</p>
-                <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 10px;">
-                    <a href="https://wa.me/2250709189580?text=Bonjour%20Nadia,%20je%20suis%20intéressé(e)%20par%20votre%20solution%20d'archivage%20Hub%20Flow." 
-                       target="_blank"
-                       style="background: #1e293b; color: white; padding: 8px; border-radius: 6px; text-decoration: none; font-weight: bold; font-size: 0.8rem; text-align: center;">
-                        🔑 Demander l'accès
-                    </a>
-                </div>
-            </div>
-
         </div>
-    </section>
 
-    <footer style="text-align: center; padding: 30px; margin-top: 40px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-        <p style="margin-bottom: 10px;">© 2026 <strong>NAHOUNOU Mazo Nadia Flore</strong> - Tous droits réservés</p>
-        <a href="mentions-legales.html" style="color: #0ea5e9; font-size: 0.85rem; text-decoration: none; font-weight: bold;">Mentions Légales & Propriété Intellectuelle</a>
-    </footer>
+        <div class="project-card">
+            <img src="ecommerce.jpeg" alt="Delaroche Fashion" class="project-img">
+            <div class="project-content">
+                <h3>Delaroche Fashion</h3>
+                <p>E-commerce de vêtements haut de gamme développé sous React.</p>
+                <a href="https://nadiaflorenahounou-lab.github.io/Ecommerce_vetements/" target="_blank" class="btn btn-blue">Visiter la boutique</a>
+            </div>
+        </div>
 
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <div id="modal-body"></div>
+        <div class="project-card">
+            <img src="niangon.png" alt="Niangon Ma Fierté" class="project-img">
+            <div class="project-content">
+                <h3>Niangon Ma Fierté</h3>
+                <p>Site WordPress pour la valorisation des projets sociaux de Niangon.</p>
+                <span class="tag-footer">Plateforme WordPress</span>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="status-badge badge-private">Propriété Privée</div>
+            <img src="cmu-smart.png" alt="CMU Smart" class="project-img">
+            <div class="project-content">
+                <h3>CMU Smart</h3>
+                <p>Inclusion santé nationale : Architecture Offline et USSD.</p>
+                <div class="btn-group">
+                    <a href="cmu-smart.html" class="btn btn-blue">Fiche du projet</a>
+                    <a href="#" class="btn btn-green">Demander l'APK</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-card">
+            <div class="status-badge badge-confidential">Confidentiel</div>
+            <img src="hubflow.png" alt="Hub Flow" class="project-img">
+            <div class="project-content">
+                <h3>DGCMU Hub Flow</h3>
+                <p>Système sécurisé d'archivage numérique institutionnel.</p>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-outline">Demander l'accès</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/nadia-flore-nahounou-a51842351/" target="_blank" class="social-icon">LinkedIn</a>
+            <a href="mailto:nadiaflorenahounou@gmail.com" class="social-icon">Me contacter par Email</a>
+        </div>
+        <div class="footer-info">
+            <p>Basée à Abidjan, Côte d'Ivoire</p>
+            <p>© 2026 <strong>Nadia Flore NAHOUNOU</strong></p>
+        </div>
+        <p><a href="mentions-legales.html" class="legal-link">Mentions Légales</a></p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
