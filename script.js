@@ -5,15 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
             card.style.opacity = '1';
-        }, i * 150);
+        }, i * 120);
     });
-    const requestButtons = document.querySelectorAll('.btn-request, .btn-outline');
-    requestButtons.forEach(btn => {
+
+    const secureButtons = document.querySelectorAll('.btn-request, .btn-green');
+    secureButtons.forEach(btn => {
         btn.addEventListener('click', (e) => {
-            if (btn.getAttribute('href') === '#') {
-                e.preventDefault();
-                alert("Demande envoyée à Nadia Flore. Une réponse vous sera adressée par email après validation de vos accès.");
-            }
+            e.preventDefault();
+            alert("SÉCURITÉ INSTITUTIONNELLE :\n\nCet élément contient des données confidentielles ou privées. Votre demande a été transmise à Nadia Flore NAHOUNOU pour validation.");
         });
     });
 });
