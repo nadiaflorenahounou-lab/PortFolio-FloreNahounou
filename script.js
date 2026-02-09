@@ -1,16 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Animation au scroll
-    const sections = document.querySelectorAll('section, header');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, { threshold: 0.1 });
-
-    sections.forEach(section => {
-        section.classList.add('fade-in');
-        observer.observe(section);
+    const cards = document.querySelectorAll('.card, .career-box, .cert-box');
+    cards.forEach((card, index) => {
+        card.style.opacity = "0";
+        card.style.transform = "translateY(20px)";
+        setTimeout(() => {
+            card.style.transition = "all 0.5s ease-out";
+            card.style.opacity = "1";
+            card.style.transform = "translateY(0)";
+        }, 100 * index);
     });
 });
