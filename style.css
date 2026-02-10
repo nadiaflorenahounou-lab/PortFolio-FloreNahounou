@@ -1,56 +1,35 @@
 :root { 
-    --bg: #0b1120; 
-    --card: #161f32; 
-    --blue: #38bdf8; 
-    --text: #f8fafc; 
-    --dim: #94a3b8; 
-    --orange: #f97316; 
+    --bg: #0b1120; --card: #161f32; --blue: #38bdf8; 
+    --text: #f8fafc; --dim: #94a3b8; --orange: #f97316; 
 }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; line-height: 1.6; padding: 0 8%; overflow-x: hidden; }
 
-/* HEADER & HERO */
-.hero { text-align: center; padding: 60px 0 40px; }
+.hero { text-align: center; padding: 60px 0; }
 .profile-glow { width: 130px; height: 130px; margin: 0 auto 25px; border-radius: 50%; border: 2px solid var(--blue); padding: 5px; box-shadow: 0 0 30px rgba(56, 189, 248, 0.15); }
 .profile-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; }
-.name-header { font-size: 2.2rem; font-weight: 800; margin-bottom: 10px; letter-spacing: -0.5px; }
-.hero-subtitle { color: var(--blue); font-size: 1rem; font-weight: 500; margin-bottom: 30px; }
-
-.description-box { max-width: 850px; margin: 0 auto 35px; text-align: center; font-size: 0.95rem; color: var(--dim); line-height: 1.8; }
+.description-box { max-width: 850px; margin: 0 auto 35px; color: var(--dim); font-size: 0.95rem; }
 
 .skill-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 50px; }
-.tag-item { border: 1px solid var(--blue); color: #fff; padding: 7px 18px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
+.tag-item { border: 1px solid var(--blue); padding: 7px 18px; border-radius: 50px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; }
 
-/* SECTIONS */
-.section-title { text-align: center; color: var(--blue); margin: 70px 0 35px; font-size: 0.9rem; letter-spacing: 4px; text-transform: uppercase; font-weight: 900; }
+.section-title { text-align: center; color: var(--blue); margin: 70px 0 35px; letter-spacing: 4px; text-transform: uppercase; font-weight: 900; font-size: 0.9rem; }
 
-/* SOLUTIONS GRID */
 .grid-solutions { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
 .card { background: var(--card); border-radius: 15px; overflow: hidden; border: 1px solid rgba(255,255,255,0.05); transition: 0.4s; text-decoration: none; color: inherit; position: relative; }
 .card:hover { transform: translateY(-8px); border-color: var(--blue); }
 .card-img { height: 190px; width: 100%; object-fit: cover; }
 .card-body { padding: 20px; }
-.card-body h3 { font-size: 1.1rem; margin-bottom: 8px; }
-.card-body p { font-size: 0.85rem; color: var(--dim); margin-bottom: 15px; }
 
-/* TIMELINE PARCOURS */
+.badge-top { position: absolute; top: 12px; right: 12px; background: var(--orange); color: white; padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; }
+.badge-role { position: absolute; top: 15px; right: 15px; background: var(--blue); color: var(--bg); padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; }
+
 .timeline { border-left: 2px solid var(--blue); margin: 0 auto; max-width: 800px; padding-left: 30px; }
 .tm-item { position: relative; margin-bottom: 40px; }
 .tm-item::before { content: ""; position: absolute; left: -37px; top: 6px; width: 12px; height: 12px; background: var(--blue); border-radius: 50%; }
-.tm-date { color: var(--blue); font-weight: 700; font-size: 0.85rem; margin-bottom: 5px; display: block; }
-.tm-title { font-size: 1.1rem; color: #fff; }
-.tm-desc { font-size: 0.9rem; color: var(--dim); margin-top: 5px; }
 
-/* CERTIFICATIONS */
-.grid-cert { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
-.cert-card { background: rgba(22, 31, 50, 0.6); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.03); display: flex; gap: 15px; align-items: flex-start; }
-.cert-card i { font-size: 1.2rem; color: var(--blue); margin-top: 3px; }
-.cert-card h4 { font-size: 0.9rem; margin-bottom: 5px; color: #fff; }
-
-/* IMPACT CARDS & BADGES */
-.badge-top { position: absolute; top: 12px; right: 12px; background: var(--orange); color: white; padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; z-index: 10; }
-.badge-role { position: absolute; top: 15px; right: 15px; background: var(--blue); color: var(--bg); padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; }
+.grid-cert { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 15px; }
+.cert-card { background: rgba(22, 31, 50, 0.6); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.03); display: flex; gap: 15px; }
 .impact-card { background: var(--card); padding: 30px; border-radius: 15px; border-top: 5px solid; position: relative; }
 
-footer { text-align: center; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; color: var(--dim); }
+footer { text-align: center; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); }
