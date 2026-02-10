@@ -42,14 +42,15 @@ body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-ser
 .tm-title { font-size: 1.1rem; color: #fff; }
 .tm-desc { font-size: 0.9rem; color: var(--dim); margin-top: 5px; }
 
-/* CERTIFICATIONS GRID */
+/* CERTIFICATIONS */
 .grid-cert { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
 .cert-card { background: rgba(22, 31, 50, 0.6); padding: 20px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.03); display: flex; gap: 15px; align-items: flex-start; }
 .cert-card i { font-size: 1.2rem; color: var(--blue); margin-top: 3px; }
 .cert-card h4 { font-size: 0.9rem; margin-bottom: 5px; color: #fff; }
-.cert-card p { font-size: 0.75rem; color: var(--dim); line-height: 1.4; }
 
-/* FOOTER */
+/* IMPACT CARDS & BADGES */
+.badge-top { position: absolute; top: 12px; right: 12px; background: var(--orange); color: white; padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; z-index: 10; }
+.badge-role { position: absolute; top: 15px; right: 15px; background: var(--blue); color: var(--bg); padding: 4px 10px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; }
+.impact-card { background: var(--card); padding: 30px; border-radius: 15px; border-top: 5px solid; position: relative; }
+
 footer { text-align: center; padding: 60px 0; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.85rem; color: var(--dim); }
-
-.badge-top { position: absolute; top: 12px; right: 12px; background: var(--orange); color: white; padding: 4px 8px; font-size: 0.65rem; border-radius: 4px; font-weight: 800; }

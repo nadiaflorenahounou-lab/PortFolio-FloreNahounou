@@ -1,7 +1,20 @@
-// Sélectionne la barre de progression
-const fill = document.querySelector('.progress-fill');
+// Smooth Scroll pour les ancres
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
-// Anime la barre de 0 à 85%
-setTimeout(() => {
-    fill.style.width = '85%';
-}, 500);
+// Animation simple au survol des cartes
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.boxShadow = "0 10px 30px rgba(56, 189, 248, 0.2)";
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.boxShadow = "none";
+    });
+});
